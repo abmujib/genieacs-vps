@@ -5,7 +5,6 @@ local_ip=$(hostname -I | awk '{print $1}')
 echo -e "${GREEN}============================================================================${NC}"
 echo -e "${GREEN}==================== Script Install GenieACS All In One. ===================${NC}"
 echo -e "${GREEN}======================== NodeJS, MongoDB, GenieACS, ========================${NC}"
-echo -e "${GREEN}===================== By LSTNetwork. Info 085322692888 =====================${NC}"
 echo -e "${GREEN}============================================================================${NC}"
 echo -e "${GREEN}Sebelum melanjutkan, silahkan baca terlebih dahulu. Apakah anda ingin melanjutkan? (y/n)${NC}"
 read confirmation
@@ -174,5 +173,4 @@ fi
 #Sukses
 echo -e "${GREEN}============================================================================${NC}"
 echo -e "${GREEN}========== GenieACS UI akses port 3000. : http://$local_ip:3000 ============${NC}"
-echo -e "${GREEN}=================== Informasi: Whatsapp 0853-2269-2888 =====================${NC}"
 echo -e "${GREEN}============================================================================${NC}"
