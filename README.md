@@ -34,7 +34,7 @@ ip route add 10.0.0.0/24 dev ppp0
 ```
 **10.0.0.0/24** adalah ip lokal untuk modem/onu.
 
-[^2]
+
 
 **INSTALL GENIEACS**
 ```
