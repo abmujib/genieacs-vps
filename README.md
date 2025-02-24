@@ -36,6 +36,7 @@ ip route add 10.0.0.0/24 dev ppp0
 
 
 ======================================================================================
+
 **INSTALL GENIEACS**
 ```
 wget https://raw.githubusercontent.com/beryindo/genieacs/refs/heads/main/genie.sh
