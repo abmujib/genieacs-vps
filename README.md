@@ -1,6 +1,4 @@
 # genieacs
-genieacs
-
 INSTALL L2TP untuk TUNNEL GENIEACS
 ```
 uname -r
