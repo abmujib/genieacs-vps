@@ -2,7 +2,9 @@
 genieacs
 
 INSTALL L2TP untuk TUNNEL GENIEACS
+```
 uname -r
+```
 cek pastikan tidak ada mengandung kata cloud
 
 wget https://raw.githubusercontent.com/beryindo/genieacs/refs/heads/main/vpnsetup.sh
