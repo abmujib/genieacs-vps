@@ -1,4 +1,7 @@
 # genieacs
+
+**UNTUK DI LOKAL TIDAK PERLU INSTALL L2TP, BISA LANGSUNG KE PROSES INSTALL GENIEACS**
+
 INSTALL L2TP untuk TUNNEL GENIEACS
 ```
 uname -r
@@ -17,7 +20,7 @@ bash add_vpn_user.sh 'username' 'password'
 ```
 
 
-INTALL GENIEACS
+**INSTALL GENIEACS**
 ```
 wget https://raw.githubusercontent.com/beryindo/genieacs/refs/heads/main/genie.sh
 chmod +x genie.sh
