@@ -10,6 +10,11 @@ PPPoE : PPPoE_Routed
 Service List : TR069,INTERNET
 InternetGatewayDevice.LANDevice.1.LANEthernetInterfaceConfig.1,InternetGatewayDevice.LANDevice.1.WLANConfiguration.1,InternetGatewayDevice.LANDevice.1.WLANConfiguration.5
 
+FIBERHOME
+PPPoE : PPPoE_Routed
+Service List : TR069,INTERNET
+InternetGatewayDevice.LANDevice.1.LANEthernetInterfaceConfig.1,InternetGatewayDevice.LANDevice.1.WLANConfiguration.1,InternetGatewayDevice.LANDevice.1.WLANConfiguration.5
+
 Jika nambahnya di wan slot WAN IP
 Conn Mode	: IP_Bridged
 Service List	: INTERNET atau Other
