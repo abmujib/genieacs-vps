@@ -49,6 +49,7 @@ Lanjutkan dengan update Config, Provisioning dan Virtual Parameter
 
 ```
 mkdir /root/db
+cd /root/db
 wget https://github.com/beryindo/genieacs/raw/refs/heads/main/config.bson
 wget https://github.com/beryindo/genieacs/raw/refs/heads/main/config.metadata.json
 wget https://github.com/beryindo/genieacs/raw/refs/heads/main/presets.bson
