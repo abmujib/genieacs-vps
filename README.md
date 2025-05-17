@@ -15,6 +15,9 @@ chmod +x vpnsetup.sh
 ```
 
 ```
+apt update
+apt upgrade
+apt install curl
 wget -O add_vpn_user.sh https://raw.githubusercontent.com/hwdsl2/setup-ipsec-vpn/master/extras/add_vpn_user.sh
 bash add_vpn_user.sh 'username' 'password'
 ```
