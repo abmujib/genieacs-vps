@@ -4,6 +4,9 @@
 
 INSTALL L2TP untuk TUNNEL GENIEACS
 ```
+apt update
+apt upgrade
+apt install curl
 uname -r
 ```
 cek pastikan TIDAK ada mengandung kata cloud
@@ -15,9 +18,6 @@ chmod +x vpnsetup.sh
 ```
 
 ```
-apt update
-apt upgrade
-apt install curl
 wget -O add_vpn_user.sh https://raw.githubusercontent.com/hwdsl2/setup-ipsec-vpn/master/extras/add_vpn_user.sh
 bash add_vpn_user.sh 'username' 'password'
 ```
@@ -42,6 +42,9 @@ ip route add 10.0.0.0/24 dev ppp0
 
 **INSTALL GENIEACS**
 ```
+apt update
+apt upgrade
+apt install curl
 wget https://raw.githubusercontent.com/beryindo/genieacs/refs/heads/main/genie.sh
 chmod +x genie.sh
 ./genie.sh
