@@ -3,7 +3,7 @@ WAN Bridge
 
 Jika nambahnya di wan slot wan PPP
 Conn Mode	: PPPoE_Bridged
-Service List	: INTERNET atau Other
+Service List	: INTERNET atau OTHER
 
 FIBERHOME
 PPPoE : PPPoE_Routed
@@ -17,7 +17,7 @@ InternetGatewayDevice.LANDevice.1.LANEthernetInterfaceConfig.1,InternetGatewayDe
 
 Jika nambahnya di wan slot WAN IP
 Conn Mode	: IP_Bridged
-Service List	: INTERNET atau Other
+Service List	: INTERNET atau OTHER
 
 =====================================================================
 
