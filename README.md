@@ -127,3 +127,8 @@ kasih akses
 sudo chmod +x /etc/ppp/ip-up.d/add-routes
 service xl2tpd restart
 ```
+
+melihat ipsec ada disini
+```
+cat /etc/ipsec.secrets
+```
