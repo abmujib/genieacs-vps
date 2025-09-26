@@ -79,9 +79,6 @@ sudo nano /etc/ppp/chap-secrets
 "bery1" l2tpd "12345678" "192.168.42.10"
 "bery2" l2tpd "12345678" "192.168.42.11"
 "bery3" l2tpd "12345678" "192.168.42.12"
-"bery4" l2tpd "12345678" "192.168.42.13"
-"bery5" l2tpd "12345678" "192.168.42.14"
-"bery6" l2tpd "12345678" "192.168.42.15"
 ```
 
 formatnya
@@ -97,30 +94,26 @@ masukkan script dibawah ini, rubah ip tr069 modem kalian.
 ```
 #!/bin/bash
 # Auto add route berdasarkan IP remote user L2TP
-# xl2tpd + pppd environment: $IPREMOTE, $IFNAME, $PEERNAME
+# Environment: $IPREMOTE, $IFNAME, $PEERNAME
+# Letakkan di /etc/ppp/ip-up.d/ misalnya
 
-case "$IPREMOTE" in
-  192.168.42.10)  # bery1
-    ip route add 192.168.120.0/22 dev $IFNAME
-    ;;
-  192.168.42.11)  # bery2
-    ip route add 172.16.4.0/22 dev $IFNAME
-    ;;
-  192.168.42.12)  # bery3
-    ip route add 172.16.12.0/22 dev $IFNAME
-    ;;
-  192.168.42.13)  # bery4
-    ip route add 192.168.4.0/22 dev $IFNAME
-    ;;
-  192.168.42.14)  # bery5
-    ip route add 192.168.8.0/22 dev $IFNAME
-    ;;
-  192.168.42.15)  # bery6
-    ip route add 192.168.12.0/22 dev $IFNAME
-    ;;
-esac
+declare -A ROUTES
+
+# Mapping: [IPREMOTE]="net1 net2 ..."
+ROUTES["192.168.42.10"]="192.168.120.0/22 10.1.0.0/22"        # bery1
+ROUTES["192.168.42.11"]="172.16.4.0/22"                       # bery2
+ROUTES["192.168.42.12"]="172.16.12.0/22 172.16.20.0/24"       # bery3
+
+# Tambahkan route jika ada mapping
+if [[ -n "${ROUTES[$IPREMOTE]}" ]]; then
+  for NET in ${ROUTES[$IPREMOTE]}; do
+    logger -t l2tp-route "Adding route $NET via $IFNAME for $IPREMOTE"
+    ip route replace "$NET" dev "$IFNAME"
+  done
+fi
 
 exit 0
+
 ```
 kasih akses
 ```
