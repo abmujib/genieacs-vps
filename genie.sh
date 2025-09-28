@@ -4,7 +4,7 @@ NC='\033[0m'
 local_ip=$(hostname -I | awk '{print $1}')
 echo -e "${GREEN}============================================================================${NC}"
 echo -e "${GREEN}==================== Script Install GenieACS All In One. ===================${NC}"
-echo -e "${GREEN}======================== NodeJS, MongoDB, GenieACS, ========================${NC}"
+echo -e "${GREEN}======================== NodeJS 20x, MongoDB 4x, GenieACS, ========================${NC}"
 echo -e "${GREEN}============================================================================${NC}"
 echo -e "${GREEN}Sebelum melanjutkan, silahkan baca terlebih dahulu. Apakah anda ingin melanjutkan? (y/n)${NC}"
 read confirmation
@@ -36,7 +36,7 @@ check_node_version() {
 
 if ! check__version; then
     echo -e "${GREEN}================== Menginstall JS ==================${NC}"
-    curl -sL https://deb.source.com/setup_20.x -o nodesource_setup.sh
+    curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
     chmod +x nodesource_setup.sh
     ./nodesource_setup.sh
     apt install nodejs -y
