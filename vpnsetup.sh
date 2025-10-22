@@ -237,12 +237,12 @@ install_pkgs() {
       export DEBIAN_FRONTEND=noninteractive
       (
         set -x
-        apt-get -yqq update || apt-get -yqq update
-      ) || exiterr "'apt-get update' failed."
+        apt -yqq update || apt -yqq update
+      ) || exiterr "'apt update' failed."
       (
         set -x
-        apt-get -yqq install wget >/dev/null || apt-get -yqq install wget >/dev/null
-      ) || exiterr "'apt-get install wget' failed."
+        apt -yqq install wget >/dev/null || apt -yqq install wget >/dev/null
+      ) || exiterr "'apt install wget' failed."
     elif [ "$os_type" != "alpine" ]; then
       (
         set -x
